@@ -1,0 +1,6 @@
+langchain
+google-generativeai
+google-cloud-aiplatform
+python-dotenv
+streamlit
+huggingface_hub
