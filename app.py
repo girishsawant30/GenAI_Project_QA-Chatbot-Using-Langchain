@@ -22,20 +22,16 @@ def get_gemini_response(question):
 ## initialize our streamlit app
     
 st.set_page_config(page_title="Q&A Demo")
-
 st.header("Langchain Application")
 
+# Get user input
 input=st.text_input("Input: ", key="input")
-get_gemini_response(input)
 
-submit=st.button("Ask the question")
+# If ask button is clicked
+if st.button("Ask the question"):
+    # Get Gemini response
+    response = get_gemini_response(input)
 
-#input=st.text_input("Input: ", key=input)
-
-
-
-## If ask button is clicked
-
-if submit:
-    st.subheader("The response is")
+    # Display the response
+    st.subheader("The response is:")
     st.write(response)
